@@ -1,0 +1,132 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f5f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Map Container */
+#map {
+    height: 500px; /* Ensure the map has a height */
+    width: 100%;   /* Ensure the map takes the full width */
+    margin-top: 20px;
+    border-radius: 10px;  /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for map */
+}
+
+/* Traffic Cleared Button */
+#traffic-cleared {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 50px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+#traffic-cleared:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Status Popup */
+.status-popup {
+    display: none;
+    background-color: #28a745;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    animation: popupAnimation 0.5s ease-in-out;
+    position: relative;
+}
+
+/* Popup Animation */
+@keyframes popupAnimation {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 28px;
+    }
+
+    #traffic-cleared {
+        padding: 12px 40px;
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+    .status-popup {
+        padding: 15px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #traffic-cleared {
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+}
+/* Send Alert Button */
+.send-alert-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 50px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Hover Effect */
+.send-alert-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Focus Effect */
+.send-alert-btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+}
